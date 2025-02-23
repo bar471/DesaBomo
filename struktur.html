@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Organisasi - Desa Bomo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #235A3C;
+            --secondary-color: #4CAF50;
+            --background-color: #f4f4f9;
+            --text-color: #333;
+            --text-light-color: #666;
+            --transition-speed: 0.3s;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+        
+
+        /* Main Section Styles */
+        main {
+            flex: 1;
+            padding: 2rem;
+            background-color: var(--background-color);
+        }
+
+        .struktur-section {
+            max-width: 1700px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .struktur-section h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .struktur-section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 0.5rem auto 0;
+        }
+
+        /* Grid Styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .grid-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            opacity: 0.05;
+            transition: opacity var(--transition-speed);
+        }
+
+        .grid-item:hover::before {
+            opacity: 0.15;
+        }
+
+        .grid-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .grid-item img {
+            width: 450px;
+            height: 450px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+            border: 3px solid var(--secondary-color);
+            transition: transform var(--transition-speed), border-color var(--transition-speed);
+        }
+
+        .grid-item img:hover {
+            transform: scale(1.1);
+            border-color: var(--primary-color);
+        }
+
+        .grid-item h3 {
+            margin: 0.5rem 0;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .grid-item p {
+            margin: 0;
+            font-size: 1rem;
+            color: var(--text-light-color);
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: auto;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            display: none;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            text-align: center;
+            line-height: 1;
+            transition: background-color var(--transition-speed);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--secondary-color);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Show Back to Top Button on Scroll */
+        body.scrolled .back-to-top {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/Mktfz51/494a4660f5fda55bbb6855d74da00b370b5c05b9-s2-n2-y2.png" alt="Logo Desa Bomo">
+            <div class="logo-text">
+                <h1>Desa Bomo</h1>
+                <p>Kabupaten Banyuwangi</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="#">Profil Desa</a>
+                    <ul class="submenu">
+                        <li><a href="desabomo.html">Desa</a></li>
+                        <li><a href="visi.html">Visi & Misi</a></li>
+                        <li><a href="sejarah.html">Sejarah Desa</a></li>
+                        <li><a href="geografis.html">Geografis Desa</a></li>
+                        <li><a href="demografis.html">Demografis Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Transparansi</a>
+                    <ul class="submenu">
+                        <li><a href="apbdesa.html">APB Desa</a></li>
+                        <li><a href="perencanaan.html">Perencanaan Pembangunan</a></li>
+                     
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Pemerintahan</a>
+                    <ul class="submenu">
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                     
+                        <li><a href="pembangunan.html">Pembangunan Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Informasi Publik</a>
+                    <ul class="submenu">
+                        <li><a href="berita.html">Berita Desa</a></li>
+                        <li><a href="pengumuman.html">Pengumuman</a></li>
+                        <li><a href="agenda.html">Agenda Kegiatan</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </li>
+                <li><a href="potensi.html">Potensi Desa</a></li>
+                <li><a href="hukum.html">Produk Hukum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="struktur-section">
+            <h2>Struktur Organisasi</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="Kepala.jpeg" alt="Kepala Desa">
+                    <h3>Kepala Desa</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Sekretaris Desa">
+                    <h3>Sekretaris Desa</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Bendahara Desa">
+                    <h3>Bendahara Desa</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Urusan Pemerintahan">
+                    <h3>Kepala Urusan Pemerintahan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Urusan Pembangunan">
+                    <h3>Kepala Urusan Pembangunan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Urusan Kemasyarakatan">
+                    <h3>Kepala Urusan Kemasyarakatan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Urusan Umum">
+                    <h3>Kepala Urusan Umum</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Urusan Keuangan">
+                    <h3>Kepala Urusan Keuangan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Seksi Kesejahteraan Rakyat">
+                    <h3>Kepala Seksi Kesejahteraan Rakyat</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Seksi Pelayanan">
+                    <h3>Kepala Seksi Pelayanan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Kepala Seksi Pemerintahan">
+                    <h3>Kepala Seksi Pemerintahan</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <div class="grid-item">
+                    <img src="path_to_image" alt="Badan Permusyawaratan Desa (BPD)">
+                    <h3>Badan Permusyawaratan Desa (BPD)</h3>
+                    <p>Nama Orang</p>
+                </div>
+                <!-- Repeat for other members -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Desa Bomo. All Rights Reserved.</p>
+    </footer>
+
+    <a href="#" class="back-to-top">↑</a>
+
+    <script>
+        // Show back-to-top button on scroll
+        window.addEventListener('scroll', function () {
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (window.scrollY > 100) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

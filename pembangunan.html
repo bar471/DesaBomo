@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembangunan Desa</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            background-color: rgb(35, 90, 60);
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: auto;
+            margin-right: 1rem;
+        }
+
+        .logo-text h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #ebd800;
+        }
+
+        .logo-text p {
+            margin: 0;
+            color: #dcdcdc;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            position: relative;
+            margin-left: 1rem;
+        }
+
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #efeff0;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #a4b300;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0;
+            list-style: none;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .submenu li {
+            margin: 0;
+        }
+
+        .submenu li a {
+            display: block;
+            padding: 0.5rem 0.75rem;
+            text-decoration: none;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .submenu li a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            background-color: #f9f9f9;
+        }
+
+        .pembangunan {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .pembangunan h1 {
+            font-size: 2.5rem;
+            color: #2a7a16;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .pembangunan h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #2a7a16;
+        }
+
+        .pembangunan-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pembangunan-content li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            background-color: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .pembangunan-content li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .pembangunan-content img {
+            width: 150px;
+            height: auto;
+            margin-right: 1rem;
+            border-radius: 8px;
+        }
+
+        .pembangunan-content .info {
+            max-width: 600px;
+        }
+
+        .pembangunan-content .info h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .pembangunan-content .info p {
+            margin: 0.5rem 0 0;
+            color: #555;
+        }
+
+        .footer-primary {
+            background-color: #2a7a16;
+            color: #ffffff;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-primary .footer-left,
+        .footer-primary .footer-right {
+            max-width: 500px;
+            flex: 1;
+            margin: 1rem 0;
+        }
+
+        .footer-primary h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-primary p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .footer-secondary {
+            background-color: #333;
+            color: #ffffff;
+            padding: 0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-secondary p {
+            margin: 0;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co/Mktfz51/494a4660f5fda55bbb6855d74da00b370b5c05b9-s2-n2-y2.png" alt="Logo Desa Bomo">
+            <div class="logo-text">
+                <h1>Desa Bomo</h1>
+                <p>Kabupaten Banyuwangi</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="#">Profil Desa</a>
+                    <ul class="submenu">
+                        <li><a href="desabomo.html">Desa</a></li>
+                        <li><a href="visi.html">Visi & Misi</a></li>
+                        <li><a href="sejarah.html">Sejarah Desa</a></li>
+                        <li><a href="geografis.html">Geografis Desa</a></li>
+                        <li><a href="demografis.html">Demografis Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Transparansi</a>
+                    <ul class="submenu">
+                        <li><a href="apbdesa.html">APB Desa</a></li>
+                        <li><a href="perencanaan.html">Perencanaan Pembangunan</a></li>
+                        
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Pemerintahan</a>
+                    <ul class="submenu">
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="pembangunan.html">Pembangunan Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Informasi Publik</a>
+                    <ul class="submenu">
+                        <li><a href="berita.html">Berita Desa</a></li>
+                        <li><a href="pengumuman.html">Pengumuman</a></li>
+                        <li><a href="agenda.html">Agenda Kegiatan</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </li>
+                <li><a href="potensi.html">Potensi Desa</a></li>
+                <li><a href="hukum.html">Produk Hukum</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="pembangunan">
+        <div class="pembangunan-content">
+            <h1>Pembangunan Desa</h1>
+            <h2>Proyek Infrastruktur</h2>
+            <ul>
+                <li>
+                    <img src="https://jatengprov.go.id/wp-content/uploads/2017/08/Sukorame.jpg" alt="Pembangunan Jalan Desa">
+                    <div class="info">
+                        <h3>Pembangunan Jalan Desa</h3>
+                        <p>Proyek pembangunan jalan desa ini bertujuan untuk meningkatkan aksesibilitas dan mobilitas warga desa.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/radarkudus/2022/03/GSG-Grobogan.jpg" alt="Pembangunan Gedung Serbaguna">
+                    <div class="info">
+                        <h3>Pembangunan Gedung Serbaguna</h3>
+                        <p>Gedung serbaguna ini akan digunakan untuk berbagai kegiatan warga, seperti pertemuan, acara, dan kegiatan sosial.</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://airkami.id/wp-content/uploads/2021/06/Kenali-Yuk-Ciri-ciri-Air-Bersih-dan-Sehat.jpg" alt="Pengadaan Air Bersih">
+                    <div class="info">
+                        <h3>Pengadaan Air Bersih</h3>
+                        <p>Proyek ini bertujuan untuk menyediakan akses air bersih bagi seluruh warga desa.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Pembangunan Sumber Daya Manusia (SDM)</h2>
+            <ul>
+                <li>
+                    <div class="info">
+                        <h3>Pendidikan</h3>
+                        <p>Meningkatkan kualitas pendidikan di desa melalui perbaikan sarana dan prasarana sekolah, pelatihan guru, dan program beasiswa.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Kesehatan</h3>
+                        <p>Meningkatkan akses masyarakat desa terhadap layanan kesehatan berkualitas melalui pembangunan puskesmas, posyandu, dan program kesehatan masyarakat.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Pelatihan Keterampilan</h3>
+                        <p>Memberikan pelatihan keterampilan kepada masyarakat desa untuk meningkatkan produktivitas dan membuka peluang usaha.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Pembangunan Ekonomi Lokal</h2>
+            <ul>
+                <li>
+                    <div class="info">
+                        <h3>Pengembangan UMKM</h3>
+                        <p>Memfasilitasi pengembangan usaha mikro, kecil, dan menengah (UMKM) di desa melalui pemberian modal, pelatihan manajemen, dan akses pasar.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Agrikultur</h3>
+                        <p>Meningkatkan produktivitas pertanian melalui penerapan teknologi pertanian modern, diversifikasi tanaman, dan pemasaran hasil pertanian.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Pariwisata</h3>
+                        <p>Mengembangkan potensi wisata desa melalui pengembangan homestay, desa wisata, dan produk-produk kerajinan tangan.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Pembangunan Sosial Budaya</h2>
+            <ul>
+                <li>
+                    <div class="info">
+                        <h3>Penguatan Lembaga Masyarakat</h3>
+                        <p>Memperkuat peran lembaga masyarakat seperti BPD, LPM, dan kelompok tani dalam pembangunan desa.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Pelestarian Budaya</h3>
+                        <p>Melestarikan nilai-nilai budaya lokal melalui berbagai kegiatan seni dan budaya.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Pemberdayaan Perempuan</h3>
+                        <p>Meningkatkan peran perempuan dalam pembangunan desa melalui program pemberdayaan dan pengarusutamaan gender.</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2>Pembangunan Lingkungan</h2>
+            <ul>
+                <li>
+                    <div class="info">
+                        <h3>Pengelolaan Sampah</h3>
+                        <p>Meningkatkan pengelolaan sampah melalui program pemilahan sampah, pembuatan kompos, dan bank sampah.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Konservasi Alam</h3>
+                        <p>Melakukan upaya konservasi alam seperti reboisasi, penanaman mangrove, dan perlindungan satwa liar.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="info">
+                        <h3>Penggunaan Energi Bersih</h3>
+                        <p>Mendorong penggunaan energi bersih seperti energi surya dan biogas.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-primary">
+            <div class="footer-left">
+                <h2>Tentang Desa Bomo</h2>
+                <p>Desa Bomo adalah desa yang terletak di Kabupaten Banyuwangi, Jawa Timur. Desa ini dikenal dengan potensi alam dan budaya yang kaya.</p>
+            </div>
+            <div class="footer-right">
+                <h2>Hubungi Kami</h2>
+                <p>Email: info@desabomo.com</p>
+                <p>Telepon: +62 812 3456 7890</p>
+                <p>Alamat: Jl. Raya Bomo No. 123, Banyuwangi, Jawa Timur</p>
+            </div>
+        </div>
+        <div class="footer-secondary">
+            <p>&copy; 2023 Desa Bomo. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

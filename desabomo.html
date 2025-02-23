@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Bomo</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @media (max-width: 768px) {
+
+            .logo img {
+                width: 40px;
+            }
+        
+            .logo-text h1 {
+                font-size: 1.3rem;
+            }
+        
+            .nav-list {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgb(35, 90, 60);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .nav-list.active {
+                display: flex;
+            }
+        
+            .nav-list li {
+                margin: 0;
+            }
+        
+            .nav-list li a {
+                color: #fff;
+                padding: 1rem;
+                text-align: center;
+                border-bottom: 1px solid #444;
+            }
+        
+            .nav-list li a:hover {
+                background-color: #a4b300;
+            }
+        
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .sotk {
+                width: 100%;
+                height: auto;
+                background-color: rgb(35, 90, 60);
+                color: #fff;
+                text-align: center;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+        
+            .sotk .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* Mengubah grid menjadi 2 kolom untuk layar kecil */
+                gap: 10px; /* Mengurangi jarak antar item */
+                justify-items: center;
+            }
+        
+            .sotk .grid-item {
+                background-color: #fff;
+                color: #333;
+                border-radius: 8px;
+                text-align: center;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+        
+            .sotk .grid-item img {
+                width: 100px; /* Mengubah lebar gambar */
+                height: 100px; /* Mengubah tinggi gambar */
+                margin-bottom: 10px; /* Mengatur jarak bawah gambar */
+                object-fit: cover;
+            }
+        
+            .sotk .grid-item h3 {
+                margin: 10px 0;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+           
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://i.ibb.co.com/Mktfz51/494a4660f5fda55bbb6855d74da00b370b5c05b9-s2-n2-y2.png" alt="Logo Desa Bomo">
+            <div class="logo-text">
+                <h1>Desa Bomo</h1>
+                <p>Kabupaten Banyuwangi</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li class="menu-item"><a href="#">Profil Desa</a>
+                    <ul class="submenu">
+                        <li><a href="desabomo.html">Desa</a></li>
+                        <li><a href="visi.html">Visi & Misi</a></li>
+                        <li><a href="sejarah.html">Sejarah Desa</a></li>
+                        <li><a href="geografis.html">Geografis Desa</a></li>
+                        <li><a href="demografis.html">Demografis Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Transparansi</a>
+                    <ul class="submenu">
+                        <li><a href="apbdesa.html">APB Desa</a></li>
+                        <li><a href="perencanaan.html">Perencanaan Pembangunan</a></li>
+                       
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Pemerintahan</a>
+                    <ul class="submenu">
+                        <li><a href="struktur.html">Struktur Organisasi</a></li>
+                        <li><a href="pembangunan.html">Pembangunan Desa</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#">Informasi Publik</a>
+                    <ul class="submenu">
+                        <li><a href="berita.html">Berita Desa</a></li>
+                        <li><a href="pengumuman.html">Pengumuman</a></li>
+                        <li><a href="agenda.html">Agenda Kegiatan</a></li>
+                        <li><a href="galeri.html">Galeri</a></li>
+                    </ul>
+                </li>
+                <li><a href="potensi.html">Potensi Desa</a></li>
+                <li><a href="hukum.html">Produk Hukum</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="https://rakyatsulsel.fajar.co.id/wp-content/uploads/2024/03/green-qurban1.jpg" alt="Hero Image">
+            <div class="hero-text">
+                <h2>Desa Bomo Banyuwangi</h2>
+            </div>
+        </section>
+
+        <section class="sambutan">
+
+        </section>
+
+        <section class="sotk">
+            <h2>Struktur Organisasi dan Tata Kerja</h2>
+            <p></p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51401785-stock-illustration-business-avatar-profile-in-black.jpg" alt="Layanan Masyarakat Icon">
+                    <h2>Kepala Desa</h2>
+                </div>
+                <div class="grid-item">
+                    <img src="https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51401785-stock-illustration-business-avatar-profile-in-black.jpg" alt="Potensi Desa Icon">
+                    <h2>Sekertaris Desa</h2>
+                </div>
+                <div class="grid-item">
+                    <img src="https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51401785-stock-illustration-business-avatar-profile-in-black.jpg" alt="Pembangunan Desa Icon">
+                    <h2>Kasi kesejahteraan</h2>
+                </div>
+                <div class="grid-item">
+                    <img src="https://st.depositphotos.com/1779253/5140/v/450/depositphotos_51401785-stock-illustration-business-avatar-profile-in-black.jpg" alt="Keuangan Desa Icon">
+                    <h2>Kasi Pelayanan</h2>
+                </div>
+            </div>
+            <a href="struktur.html">
+          <button class="btn-selengkapnya">Selengkapnya</button>
+        </a>
+        </section>
+      
+<section></section>
+        <section class="Layanan">
+            <h2>Layanan Desa</h2>
+            <p></p>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="https://i.ibb.co.com/YdSLrJY/services.png" alt="Layanan Masyarakat Icon">
+                    <h4>Layanan Masyarakat</h4>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.ibb.co.com/M8cStRh/Asset186-1.png" alt="Potensi Desa Icon">
+                    <h4>Potensi Desa</h4>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.ibb.co.com/cNtV52R/Asset187.png" alt="Pembangunan Desa Icon">
+                    <h4>Pembangunan Desa</h4>
+                </div>
+                <div class="grid-item">
+                    <img src="https://i.ibb.co.com/kJYKxzX/Asset192-1.png" alt="Keuangan Desa Icon">
+                    <h4>Keuangan Desa</h4>
+                </div>
+            </div>
+        </section>
+
+        <section class="Group1">
+            <div class="Berita">
+                <h3>Berita Terkini</h3>
+                <div class="news-container">
+                    <div class="news-item">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Batas_Desa_Bomo_di_Banyuwangi%3B_Agustus_2015.jpg" alt="News 1">
+                        <div class="news-date">Mar 17, 2024</div>
+                        <div class="news-content">
+                            <h4><a href="link1.html">Melakukan Diagnosa Koneksi Jaringan Internet Di Komputer Anda Ke Aplikasi Web Melalui Syntaks PING dan TRACEROUTE</a></h4>
+                            <p>Menguji / Melakukan Diagnosa Koneksi Jaringan Internet Di Komputer Anda Ke Aplikasi Web SIDEKA-NG Melalui Syntax PING & TRACEROUTE by Mochamad Wendy...</p>
+                            <a href="link1.html">Selengkapnya ></a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://www.sinergifoundation.org/sinergi/wp-content/uploads/2022/01/Progress-Pembenahan-Edu-Wisata-Konservasi-Pantai-Ria-Bomo.jpg" alt="News 2">
+                        <div class="news-date">Feb 10, 2024</div>
+                        <div class="news-content">
+                            <h4><a href="link2.html">Interopabilitas SIDEKA-NG</a></h4>
+                            <p>Tentang Modul Interopabilitas SIDEKA-NG...</p>
+                            <a href="link2.html">Selengkapnya ></a>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://actanews.id/wp-content/uploads/2024/03/Screenshot_20240320_153847_WhatsApp.jpg" alt="News 3">
+                        <div class="news-date">Feb 05, 2024</div>
+                        <div class="news-content">
+                            <h4><a href="link3.html">Prosedur Pemanfaatan Sideka NG</a></h4>
+                            <p>Berikut adalah konsep pengelolaan SIDEKA NG...</p>
+                            <a href="link3.html">Selengkapnya ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="Pengumuman">
+                <h3>Pengumuman</h3>
+                <div class="box-container">
+                    <a href="link1.html" class="box">PMM Kerja nyata</a>
+                    <a href="link2.html" class="box">Pendaftaran Desa pondok</a>
+                    <a href="link3.html" class="box">Seleksi Peserta BUmn</a>
+                </div>
+            </div>
+            
+            
+            <div class="agenda">
+                <h3>Agenda Kegiatan</h3>
+                <div class="agenda-item">
+                    <div class="date">
+                        <span class="day">Juni 32</span>
+                        <span class="year">2024</span>
+                    </div>
+                    <div class="details">
+                        <div class="title">Sosialisasi Penanggulangan The day</div>
+                        <div class="location">Lokasi: </div>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="date">
+                        <span class="day">Sep 32</span>
+                        <span class="year">2022</span>
+                    </div>
+                    <div class="details">
+                        <div class="title">Pemberian Bantuan</div>
+                        <div class="location">Lokasi: </div>
+                    </div>
+                </div>
+                <div class="agenda-item">
+                    <div class="date">
+                        <span class="day">Jul 06</span>
+                        <span class="year">2026</span>
+                    </div>
+                    <div class="details">
+                        <div class="title">Musyawarah Desa </div>
+                        <div class="location">Lokasi: </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Group2">
+            <div class="Galeri">
+                <h3>Galeri Foto & Video</h3>
+                <div class="video-grid">
+                    <iframe src="https://www.youtube.com/embed/video_id_1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video_id_2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video_id_3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video_id_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video_id_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/video_id_6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="Maps">
+                <h3>Peta Desa</h3>
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.449558173865!2d114.32332921478012!3d-8.287593994048447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd400a8f76413a9%3A0xc4e6c3f7e5dfb142!2sBomo%2C%20Blimbingsari%2C%20Kabupaten%20Banyuwangi%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1625022517926!5m2!1sid!2sid" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer-primary">
+        <div class="footer-left">
+            <h2>Profil Desa</h2>
+            <p>Desa Bomo, sebuah desa yang terletak di Blimbingsari, Banyuwangi, memiliki potensi besar dalam bidang pertanian, kerajinan, dan pariwisata. Dengan kekayaan alam dan kearifan lokal yang dimiliki, desa ini berupaya untuk mengembangkan UMKM dan meningkatkan kesejahteraan masyarakat. Pembuatan website Desa Bomo bertujuan untuk mempromosikan potensi desa, memfasilitasi komunikasi antara pemerintah desa dan masyarakat, serta meningkatkan transparansi dalam pengelolaan desa. Melalui website ini, diharapkan Desa Bomo dapat menjadi desa yang mandiri dan sejahtera, serta menjadi destinasi wisata yang menarik.</p>
+        </div>
+        <div class="footer-right">
+            <h2>Kontak Desa</h2>
+            <p>Alamat: Jalan Bomo No. 123, Kabupaten Batang</p>
+            <p>Email: info@desabomo.id</p>
+        </div>
+    </footer>
+    <footer class="footer-secondary">
+        <div class="footer-left">
+            <p>&copy; 2024 Desa Bomo</p>
+        </div>
+        <div class="footer-right">
+            <p>Since 2024</p>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
